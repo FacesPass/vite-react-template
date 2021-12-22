@@ -4,6 +4,7 @@ const request = axios.create({
   baseURL: 'localhost:8080',
   timeout: 5000,
 });
+
 request.interceptors.request.use(
   (config) => {
     // 携带 token 发送
@@ -27,4 +28,4 @@ request.interceptors.response.use(
   },
 );
 
-export default request;
+export { request };
